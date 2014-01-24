@@ -96,10 +96,12 @@ public class SelectRecipientsListItem extends LinearLayout implements Contact.Up
     }
 
     private void updateAvatarView() {
-        if (mContact == null) {
-            // we were unbound in the meantime
-            return;
+        Drawable defaultContactImage =
+                mContext.getResources().getDrawable(R.drawable.ic_contact_picture);
+        if (!sDefaultContactImage.getConstantState().equals(defaultContactImage)) {
+            sDefaultContactImage = defaultContactImage;
         }
+        Drawable avatarDrawable;
 
         Drawable avatarDrawable = mContact.getAvatar(mContext, sDefaultContactImage);
 
