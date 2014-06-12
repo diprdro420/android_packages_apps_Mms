@@ -67,6 +67,7 @@ public class CMMmsDatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(CONVERSATIONS_VIBRATE_ENABLED, conversationSettings.mVibrateEnabled);
         contentValues.put(CONVERSATIONS_VIBRATE_PATTERN, conversationSettings.mVibratePattern);
         db.insert(CONVERSATIONS_TABLE, null, contentValues);
+        db.close();
     }
 
     // boolean version
@@ -77,6 +78,7 @@ public class CMMmsDatabaseHelper extends SQLiteOpenHelper {
         db.update(CONVERSATIONS_TABLE, contentValues,
                 " " + CONVERSATIONS_THREAD_ID + " = ?",
                 new String[]{String.valueOf(threadId)});
+        db.close();
     }
 
     // string version
@@ -87,6 +89,7 @@ public class CMMmsDatabaseHelper extends SQLiteOpenHelper {
         db.update(CONVERSATIONS_TABLE, contentValues,
                 " " + CONVERSATIONS_THREAD_ID + " = ?",
                 new String[]{String.valueOf(threadId)});
+        db.close();
     }
 
     public void updateCMConversationSettings(CMConversationSettings conversationSettings) {

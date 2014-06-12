@@ -212,4 +212,7 @@
     <string name="progress_mms_title">MMS transaction on other sub in progress</string>
     <string name="progress_mms">Messaging: MMS in progress\u2026</string>
     <string name="progress_mms_text">Touch to retry</string>
+
+    <!-- Failed to open associated activity -->
+    <string name="failed_open_associated_activity_msg">Failed to open associated activity</string>
 </resources>
