@@ -101,8 +101,6 @@ public class SelectRecipientsListItem extends LinearLayout implements Contact.Up
         if (!sDefaultContactImage.getConstantState().equals(defaultContactImage)) {
             sDefaultContactImage = defaultContactImage;
         }
-        Drawable avatarDrawable;
-
         Drawable avatarDrawable = mContact.getAvatar(mContext, sDefaultContactImage);
 
         if (mContact.existsInDatabase()) {
